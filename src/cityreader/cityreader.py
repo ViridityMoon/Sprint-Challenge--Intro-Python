@@ -27,10 +27,32 @@ def cityreader(cities=[]):
   # TODO Implement the functionality to read from the 'cities.csv' file
   # Ensure that the lat and lon valuse are all floats
   # For each city record, create a new City instance and add it to the 
-  # `cities` list ",".split(row)
-  with open("cities.csv")as csvfile:
+  # `cities` list "if row.split(",")[0] != "city":"
+
+  
+
+  with open("./src/cityreader/cities.csv", "r")as csvfile:
+    
     for row in csvfile:
-      print(row)
+        if row.split(",")[0] != "city":
+          city_name = row.split(",")[0]
+          city_lat = row.split(",")[3]
+          city_lon = row.split(",")[4]
+          print(city_name)
+          print(city_lat)
+          print(city_lon)
+          c = City(city_name, city_lat, city_lon)
+          cities.append(c)
+
+      # for row in csvfile[1:]:
+      #   city_name = row.split(",")[0]
+      #   city_lat = row.split(",")[3]
+      #   city_lon = row.split(",")[4]
+      #   print(city_name)
+      #   print(city_lat)
+      #   print(city_lon)
+      #   c = City(city_name, city_lat, city_lon)
+      #   cities.append(c)
     
   return cities
 
