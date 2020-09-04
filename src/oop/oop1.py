@@ -19,25 +19,25 @@
 # Put a comment noting which class is the base class
 
 # Base class
-class Vehicle(self):
+class Vehicle():
     pass
 
 # GroundVehicle and FlightVehicle are both direct subclasses of 
 # the base class
-class GroundVehicle(Vehicle, self):
+class GroundVehicle(Vehicle):
     pass
-class FlightVehicle(Vehicle, self):
+class FlightVehicle(Vehicle):
     pass
 
 # Car and Motorcycle are both direct subclasses of GroundVehicle
-class Car(GroundVehicle, self):
+class Car(GroundVehicle):
     pass
-class Motorcycle(GroundVehicle, self):
+class Motorcycle(GroundVehicle):
     pass
 
 # Starship and Airplane are both direct subclasses of
 # FlightVehicle
-class Starship(FlightVehicle, self):
+class Starship(FlightVehicle):
     pass
-class Airplane(FlightVehicle, self):
+class Airplane(FlightVehicle):
     pass
